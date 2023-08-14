@@ -8,9 +8,17 @@ The Custom Teams & Member Module is a Magento extension that adds functionality 
 
 ## Custom Teams & Member Module
 
+
+## Custom Teams Module
 ![Screenshot 1](Screenshot/Screenshot%20(185).png)
 ![Screenshot 2](Screenshot/Screenshot%20(186).png)
 
+
+## Custom Member Module
+
+![Screenshot 1](Screenshot/Screenshot%20(192).png)
+![Screenshot 2](Screenshot/Screenshot%20(193).png)
+![Screenshot 3](Screenshot/Screenshot%20(194).png)
 
 ## Installation
 
