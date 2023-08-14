@@ -1,0 +1,26 @@
+<div class="manage-member">
+	<?php $allmember = $this->getListMember() ?>
+	<?php if($allmember && count($allmember) > 0): ?>
+		<?php foreach($allmember as $member): ?>
+			<div class="rsg-member-list">
+				<div class="rsg-member-title">
+					<a href="<?php echo $block->getBaseUrl() ?>member/index/view/?id=<?php echo $member->getId() ?>">
+						<?php echo $member->getTitle() ?>
+					</a>
+					</div>
+				<div class="rsg-member-mem">Member Id : <?php echo $member->getmemberId() ?></div>
+				<div class="rsg-member-nam">Name : <?php echo $member->getName() ?></div>
+				<div class="rsg-member-dep">Department : <?php echo $member->getDepartment() ?></div>
+				<div class="rsg-member-quo">Quotes : <?php echo $member->getQuotes() ?></div>
+			</div>
+		<?php endforeach; ?>
+		
+		<?php if($this->getPagerHtml()): ?>
+			<?php echo $this->getPagerHtml(); ?>
+		<?php endif; ?>
+	<?php else: ?>
+		<div class="manage-no-records">
+			<?php echo __('Member not available'); ?>
+		</div>
+	<?php endif; ?>
+</div>
