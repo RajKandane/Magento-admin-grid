@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Custom_Member::custommember" title="Custom Member" module="Custom_Member" sortOrder="51" resource="Custom_Member::custommember"/>
+        <add id="Custom_Member::post" title="Member" module="Custom_Member" sortOrder="10" action="custommember/post" resource="Custom_Member::post" parent="Custom_Member::custommember"/>
+    </menu>
+</config>

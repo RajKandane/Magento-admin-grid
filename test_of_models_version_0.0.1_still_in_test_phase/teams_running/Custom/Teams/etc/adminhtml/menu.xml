@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Custom_Teams::customteams" title="Custom Teams" module="Custom_Teams" sortOrder="51" resource="Custom_Teams::customteams"/>
+        <add id="Custom_Teams::post" title="Teams" module="Custom_Teams" sortOrder="10" action="customteams/post" resource="Custom_Teams::post" parent="Custom_Teams::customteams"/>
+    </menu>
+</config>
