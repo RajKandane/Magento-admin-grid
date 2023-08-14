@@ -1,0 +1,24 @@
+<div class="custom-teams">
+	<?php $allteams = $this->getListTeams() ?>
+	<?php if($allteams && count($allteams) > 0): ?>
+		<?php foreach($allteams as $teams): ?>
+			<div class="rsg-teams-list">
+				<div class="rsg-teams-title">
+					<a href="<?php echo $block->getBaseUrl() ?>teams/index/view/?id=<?php echo $teams->getId() ?>">
+						<?php echo $teams->getTitle() ?>
+					</a>
+					</div>
+				<div class="rsg-teams-time"><?php echo $teams->getCreatedAt() ?></div>
+				<div class="rsg-teams-desc"><?php echo $teams->getdepartmentName() ?></div>
+			</div>
+		<?php endforeach; ?>
+		
+		<?php if($this->getPagerHtml()): ?>
+			<?php echo $this->getPagerHtml(); ?>
+		<?php endif; ?>
+	<?php else: ?>
+		<div class="custom-no-records">
+			<?php echo __('Teams not available'); ?>
+		</div>
+	<?php endif; ?>
+</div>

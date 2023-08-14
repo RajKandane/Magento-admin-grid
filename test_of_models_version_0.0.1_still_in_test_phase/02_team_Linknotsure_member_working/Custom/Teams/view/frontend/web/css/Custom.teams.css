@@ -1,0 +1,35 @@
+.custom-teams .rsg-teams-list {
+	padding: 15px;
+	border: 1px solid #ccc;
+	display: block;
+	margin-top: -1px;
+}
+.custom-teams .rsg-teams-list:nth-child(even){
+	background-color:#f1f1f1;
+}
+.custom-teams .rsg-teams-list:nth-child(odd){
+	background-color:#FAFAFA;
+}
+.custom-teams .rsg-teams-title {
+	font-weight:bold;
+	font-size:16px;
+	margin-bottom:5px;
+}
+.custom-teams .rsg-teams-time {
+	font-size:14px;
+	color:#666;
+	font-style:italic;
+}
+.custom-teams .pager {
+	margin-top:20px;
+	display:flex;
+}
+.custom-teams .toolbar-amount {
+	margin-right:20px;
+}
+.custom-teams .rsg-teams-desc {
+	margin-top:15px;
+}
+.custom-teams a:hover {
+	text-decoration:none;
+}

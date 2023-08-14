@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Custom_Teams::custom" title="Custom" sortOrder="51">
+                    <resource id="Custom_Teams::teams_allteams" title="All Teams" sortOrder="10">
+						<resource id="Custom_Teams::save" title="Save Teams" translate="title" sortOrder="10" />
+						<resource id="Custom_Teams::teams_delete" title="Delete Teams" translate="title" sortOrder="20" />
+					</resource>
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Custom_Teams::teams_config" title="Custom Teams" translate="title"/>
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
