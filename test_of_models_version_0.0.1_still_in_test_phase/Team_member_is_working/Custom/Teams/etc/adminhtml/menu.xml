@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+	  <add id="Custom_Teams::custom" title="Custom" translate="title" module="Custom_Teams" sortOrder="51" dependsOnModule="Custom_Teams" resource="Custom_Teams::custom"/>
+	  <add id="Custom_Teams::teams" title="Teams" translate="title" module="Custom_Teams" parent="Custom_Teams::custom" sortOrder="50" dependsOnModule="Custom_Teams" resource="Custom_Teams::teams"/>
+	  <add id="Custom_Teams::teams_allteams" title="All Teams" translate="title" module="Custom_Teams" parent="Custom_Teams::teams" sortOrder="10" dependsOnModule="Custom_Teams" action="teams/allteams" resource="Custom_Teams::teams_allteams"/>
+	</menu>
+</config>
+  
