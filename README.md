@@ -22,21 +22,25 @@ The Custom Teams & Member Module is a Magento extension that adds functionality 
 
 ## Installation
 
-1. Clone or download this repository into the `app/code/Custom/Member` and `app/code/Custom/Teams` directory of your Magento installation.
+1. Clone or download this repository into the `app/code/Custom/Member` and `app/code/Custom/Teams` directory of your Magento installation. Or you can also clone or download this repository into the `app/code/Manage/Member` and `app/code/Manage/Teams` directory of your Magento installation. 
 
-2. Run the following commands from your Magento root directory:
+3. Run the following commands from your Magento root directory:
 
    ```bash
    bin/magento setup:upgrade
    bin/magento setup:static-content:deploy -f
    bin/magento cache:flush
 
-3. The module will now be installed and ready to use.
+4. The module will now be installed and ready to use.
 
 ## Features
 
+- For `app/code/Custom`
 - Adds a new table `custom_member_post` and `custom_teams_post` to the database for storing team member information.
 - Adds a new column `status` to the `custom_teams` table for indicating the status of a team.
+  
+- And as for the  `app/code/Manage`
+- Adds a new table `manage_member` and `manage_teams` to the database for storing team member information.
 
 ## Usage
 
