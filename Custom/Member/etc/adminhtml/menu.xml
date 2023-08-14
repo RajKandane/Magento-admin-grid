@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+	  <add id="Custom_Member::custom" title="Custom Member" translate="title" module="Custom_Member" sortOrder="51" dependsOnModule="Custom_Member" resource="Custom_Member::custom"/>
+	  <add id="Custom_Member::member" title="Member" translate="title" module="Custom_Member" parent="Custom_Member::custom" sortOrder="50" dependsOnModule="Custom_Member" resource="Custom_Member::member"/>
+	  <add id="Custom_Member::member_allmember" title="Member" translate="title" module="Custom_Member" parent="Custom_Member::member" sortOrder="10" dependsOnModule="Custom_Member" action="member/allmember" resource="Custom_Member::member_allmember"/>
+	</menu>
+</config>
+  
