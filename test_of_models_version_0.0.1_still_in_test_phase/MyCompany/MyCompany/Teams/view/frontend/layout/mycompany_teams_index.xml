@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="MyCompany_Teams::css/tab-styles.css" />
+        <script src="MyCompany_Teams::js/tab-script.js" />
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="MyCompany\Teams\Block\Frontend\Team" name="mycompany_teams_team_block" template="MyCompany_Teams::team.phtml" />
+            <block class="MyCompany\Teams\Block\Frontend\Member" name="mycompany_teams_member_block" template="MyCompany_Teams::member.phtml" />
+        </referenceContainer>
+    </body>
+</page>

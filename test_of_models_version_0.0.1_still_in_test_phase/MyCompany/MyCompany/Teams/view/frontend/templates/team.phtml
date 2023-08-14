@@ -1,0 +1,9 @@
+<?php
+$tabIds = ['all', 'design', 'creative', 'sales', 'tech', 'logistic']; // Replace with your actual tab IDs
+
+foreach ($tabIds as $tabId) {
+    echo '<div class="tab-content" id="tab-content-' . $tabId . '">';
+    echo $block->getTabContent($tabId);
+    echo '</div>';
+}
+?>

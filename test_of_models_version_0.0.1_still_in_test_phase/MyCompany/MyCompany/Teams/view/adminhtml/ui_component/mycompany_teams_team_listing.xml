@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">mycompany_teams_team_listing.mycompany_teams_team_listing_data_source</item>
+            <item name="deps" xsi:type="string">mycompany_teams_team_listing.mycompany_teams_team_listing_data_source</item>
+        </item>
+        <item name="spinner" xsi:type="string">mycompany_teams_team_columns</item>
+    </argument>
+    <dataSource name="mycompany_teams_team_listing_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">MyCompany\Teams\Ui\Component\Listing\DataProvider\TeamDataProvider</argument>
+            <argument name="name" xsi:type="string">mycompany_teams_team_listing_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">team_id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
+                </item>
+            </argument>
+        </argument>
+    </dataSource>
+    <listingToolbar name="listing_top">
+        <settings>
+            <sticky>true</sticky>
+        </settings>
+        <bookmark name="bookmarks"/>
+        <filters name="listing_filters"/>
+        <columnsControls name="columns_controls"/>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+    <columns name="mycompany_teams_team_columns" class="Magento\Ui\Component\Listing\Columns">
+        <column name="team_id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">10</item>
+                    <item name="label" xsi:type="string" translate="true">Team ID</item>
+                </item>
+            </argument>
+        </column>
+        <column name="department">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">20</item>
+                    <item name="label" xsi:type="string" translate="true">Department</item>
+                </item>
+            </argument>
+        </column>
+        <!-- Add more columns here -->
+        <actionsColumn name="actions" class="MyCompany\Teams\Ui\Component\Listing\Column\TeamActions">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="indexField" xsi:type="string">team_id</item>
+                </item>
+            </argument>
+        </actionsColumn>
+    </columns>
+    <container name="add_new_button" label="Add New Team" >
+        <button name="add_new_team_button" class="Magento\Backend\Block\Widget\Button" >
+            <argument name="label" xsi:type="string" translate="true">Add New Team</argument>
+            <argument name="class" xsi:type="string">primary</argument>
+            <argument name="sortOrder" xsi:type="number">0</argument>
+            <argument name="url" xsi:type="url" path="mycompany_teams/team/add"/>
+        </button>
+    </container>
+</listing>
